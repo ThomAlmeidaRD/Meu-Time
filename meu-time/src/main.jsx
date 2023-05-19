@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Countries from './pages/countries.jsx'
-import Leagues from './pages/leagues.jsx'
+import Home from './pages/Home.jsx'
+
+import Seasons from './pages/seasons.jsx'
 
 const pages = createBrowserRouter([
   {
@@ -11,12 +12,16 @@ const pages = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/paises",
-    element: <Countries />
+    path: "/home",
+    element: <Home />
   },
   {
     path: "/paises/ligas",
-    element: <Leagues />
+    element: <Home />
+  },
+  {
+    path: "/paises/ligas/temporadas",
+    element: <Seasons />
   },
 
 ])

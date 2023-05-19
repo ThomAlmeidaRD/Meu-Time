@@ -1,0 +1,67 @@
+@import url(sidebar.css);
+@import url(leagues.css);
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.container-content {
+    width: 98%;
+    height: 95%;
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+}
+
+.soccer-infos {
+    height: 100%;
+    width: 100%;
+}
+
+.content-square {
+    height: 42%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px 15px;
+    border-radius: 7px;
+    overflow-y: auto;
+}
+
+.content-square h2 {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

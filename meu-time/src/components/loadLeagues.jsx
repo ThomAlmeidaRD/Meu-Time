@@ -5,10 +5,10 @@ function loadLeagues() {
 
 
 
-    fetch("https://api-football-beta.p.rapidapi.com/leagues", {
+    fetch("https://v3.football.api-sports.io/leagues", {
         "method": "GET",
         "headers": {
-            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
+            "x-rapidapi-host": "v3.football.api-sports.io",
             "x-rapidapi-key": API_KEY
         }
     })
@@ -18,9 +18,9 @@ function loadLeagues() {
             var url = window.location.href
             var parts_url = url.split('/')
             var only_country = parts_url[4].split('?=')
-            
-            var selectedCountry = []
 
+            var selectedCountry = []
+           
             for (var i = 0; i < data.response.length; i++) {
                 if (data.response[i].country.name === only_country[1]) {
                     selectedCountry.push(data.response[i])
@@ -32,9 +32,9 @@ function loadLeagues() {
             //console.log(selectedCountry[0].league)
             for (var j = 0; j < selectedCountry.length; j++) {
 
-                var print = document.querySelector('#print')
+                var leaguesList = document.querySelector('#leagues-list')
 
-                var printLI = document.createElement('li')
+                var leagueItem = document.createElement('li')
                 var leaguesDiv = document.createElement('div')
                 var leaguesLogo = document.createElement('img')
                 var leaguesName = document.createElement('h3')
@@ -51,13 +51,17 @@ function loadLeagues() {
                 leaguesName.innerText = selectedCountry[j].league.name
                 leaguesType.innerText = selectedCountry[j].league.type
 
-                printLI.appendChild(leaguesDiv)
+                leaguesList.appendChild(leaguesDiv)
                 leaguesDiv.appendChild(leaguesLogo)
                 leaguesDiv.appendChild(leaguesName)
                 leaguesDiv.appendChild(leaguesType)
                 leaguesDiv.appendChild(icon)
 
-                print.appendChild(printLI)
+                leaguesList.appendChild(leagueItem)
+
+                leagueItem.onclick = function(){
+                    console.log('hello')
+                }
 
             }
 

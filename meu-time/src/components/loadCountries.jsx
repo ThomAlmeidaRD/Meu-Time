@@ -3,54 +3,48 @@ import API_KEY from "../keys";
 
 function loadCountries() {
 
- 
 
-    fetch("https://api-football-beta.p.rapidapi.com/countries", {
+
+    fetch("https://v3.football.api-sports.io/countries", {
         "method": "GET",
         "headers": {
-            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
+            "x-rapidapi-host": "v3.football.api-sports.io",
             "x-rapidapi-key": API_KEY
         }
     })
         .then(response => response.json())
         .then(data => {
-            
+
             console.log(data)
 
-            for(var i = 0; i < data.response.length; i++){
+            for (var i = 0; i < data.response.length; i++) {
 
-                var print = document.querySelector('#print')
-              
-                var printLI = document.createElement('li')
-                var countriesDiv = document.createElement('div')
-                var countriesFlag = document.createElement('img')
-                var countriesName = document.createElement('h3')
-                var countriesCode = document.createElement('h3')
+                var countriesList = document.querySelector('#countries-list')
+
+                var countryItem = document.createElement('li')
+                var countryFlag = document.createElement('img')
+                var countryTitle = document.createElement('h3')
                 var icon = document.createElement('ion-icon')
 
-                countriesDiv.classList.add('countries')
+                countryItem.classList.add('country-item')
+                countryTitle.classList.add('title')
+
+                countryFlag.src = data.response[i].flag
+                countryTitle.innerText = data.response[i].name
                 icon.name = 'chevron-forward'
-                
-                countriesFlag.src = data.response[i].flag
-                countriesName.innerText = data.response[i].name
-                countriesCode.innerText = data.response[i].code
 
-                printLI.appendChild(countriesDiv)
-                countriesDiv.appendChild(countriesFlag)
-                countriesDiv.appendChild(countriesName)
-                countriesDiv.appendChild(countriesCode)
-                countriesDiv.appendChild(icon)
+                countryItem.appendChild(countryFlag)
+                countryItem.appendChild(countryTitle)
+                countryItem.appendChild(icon)
 
-                print.appendChild(printLI)
+                countriesList.appendChild(countryItem)
 
-                printLI.onclick = function(){
-                    var curent_country_name = this.childNodes[0].childNodes[1].innerText
-                    console.log(curent_country_name)
-                    window.location.href = '/paises/ligas?=' + curent_country_name
-                }
-
+                countryItem.addEventListener('click', function () {
+                    var country_name = this.childNodes[1].innerText
+                    console.log(country_name)
+                })
             }
-            
+
         })
         .catch(err => {
             console.log(err);

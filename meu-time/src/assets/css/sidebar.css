@@ -1,0 +1,87 @@
+.side-bar {
+    border-right: 1px solid #ddd;
+    width: 20%;
+    height: 100%;
+    padding-right: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#countries-list {
+    padding: 10px 4px;
+    overflow-y: auto;
+    height: 83%;
+    /* background: #ddd; */
+}
+
+.country-item {
+    background-color: #f2f2f250;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 8px 0px;
+    width: 85%;
+}
+
+.country-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 2px #000;
+}
+
+.country-item img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.country-item h3 {
+    font-size: 1.03em;
+}
+
+.title {
+    width: 45%;
+    margin: 0px 10px;
+    font-weight: 700;
+}
+
+.side-bar input {
+    width: 93%;
+    padding: 10px 0px;
+    border: 1px solid #b9b9b9;
+    font-size: 1.03em;
+    margin: 10px 0px;
+    border-radius: 5px;
+    outline-color: #4a4a4a;
+}
+
+.side-bar input::placeholder {
+    padding: 0px 7px;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+.side-bar hr {
+    text-align: center;
+    width: 95%;
+    margin-top: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar ion-icon {
+    position: absolute;
+    right: 25px;
+    color: #4a4a4a;
+    font-size: 19px;
+}

@@ -1,0 +1,83 @@
+.league-item img {
+    width: 50px;
+}
+
+.content-square ul {
+    padding: 10px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.league-item {
+    width: 95%;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.league-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 2px #4a4a4a;
+}
+
+.league-brand {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.league-type {
+    background-color: #ddd;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+
+.league-item ion-icon {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.accordion ul {
+    text-align: center;
+    overflow-y: auto;
+    border-color: #ddd;
+    height: 100px;
+}
+
+.accordion li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 0px;
+    font-weight: 500;
+}
+
+.accordion li:hover {
+    box-shadow: 0px 0px 3px #6e6e6e;
+}
+
+.special-warning {
+    padding: 40px 0px;
+}
+
+.special-warning h2 {
+    display: none;
+    text-align: center;
+    line-height: 150%;
+    color: #4a4a4a;
+}
+
+.team {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.team-brand {
+    width: 100% !important;
+}

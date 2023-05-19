@@ -14,7 +14,7 @@ function auth() {
     displayError.innerText = 'Insira uma chave de API válida.'
   } else if (txtAPI.value == API_KEY) {
     txtAPI.value = ''
-    window.location.href = '/paises'
+    window.location.href = '/home'
     
   }
 }
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <main>
+      <main className='main-login'>
         <div className='content'>
           <h4>Meu Time</h4>
           <h1>Todos os Dados do seu Time Favorito com uma Interface Incrível</h1>
