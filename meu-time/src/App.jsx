@@ -1,6 +1,5 @@
 import './assets/css/main.css'
-
-var API_KEY = 'c0c99d1d10c719c858bcdcdf31134c83'
+import API_KEY from './keys'
 
 function auth() {
 
@@ -13,18 +12,14 @@ function auth() {
   } else if (txtAPI.value != API_KEY) {
     displayError.style.display = 'block'
     displayError.innerText = 'Insira uma chave de API válida.'
-  }else if(txtAPI.value == API_KEY){
-    displayError.style.display = 'block'
-    displayError.style.background = 'green'
-    displayError.style.color = 'springgreen'
-    displayError.innerText = 'Chave inserida com sucesso'
+  } else if (txtAPI.value == API_KEY) {
+    txtAPI.value = ''
+    window.location.href = '/paises'
+    
   }
 }
 
 function App() {
-
-  var print = document.querySelector('p')
-  const API_KEY = 'c0c99d1d10c719c858bcdcdf31134c83'
 
   return (
     <>
@@ -44,23 +39,3 @@ function App() {
 
 export default App
 
-
-/* 
-
-  fetch("https://v3.football.api-sports.io/status", {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-host": "v3.football.api-sports.io",
-      "x-rapidapi-key": ""
-    }
-  })
-    .then(response => response.text())
-    .then(data => {
-      console.log(data)
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
-
-*/
