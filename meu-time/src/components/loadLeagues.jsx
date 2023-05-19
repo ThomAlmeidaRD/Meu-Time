@@ -15,13 +15,10 @@ function loadLeagues() {
         .then(response => response.json())
         .then(data => {
 
-
             var url = window.location.href
             var parts_url = url.split('/')
             var only_country = parts_url[4].split('?=')
-            console.log(only_country[1])
-
-            console.log(data.response)
+            
             var selectedCountry = []
 
             for (var i = 0; i < data.response.length; i++) {
