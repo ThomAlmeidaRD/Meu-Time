@@ -39,6 +39,7 @@ ul {
 .country-item img {
     width: 50px;
     margin-right: 5px;
+    border-radius: 5px;
 }
 
 .country-item h3 {
