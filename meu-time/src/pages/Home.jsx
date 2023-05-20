@@ -1,32 +1,32 @@
-//import loadCountries from "../components/loadCountries"
+import loadCountries from "../components/loadCountries"
 import { useEffect } from "react"
 
 function Home() {
 
-    // loadCountries()
+    loadCountries()
 
     useEffect(() => {
 
         const updateSearch = (event) => {
             var countries_list = document.querySelectorAll('#countries-list .country-item')
-            for(var country of countries_list){
-            
-            var country_name = country.innerText.toLowerCase()
+            for (var country of countries_list) {
 
-            if(!country_name.includes(input.value.toLowerCase())){
-                //console.log(country_name)
-                var thisCountry = country
-                thisCountry.style.display = 'none'
-            }else{
-                var thisCountry = country
-                thisCountry.style.display = 'flex'
-            }
+                var country_name = country.innerText.toLowerCase()
+
+                if (!country_name.includes(input.value.toLowerCase())) {
+                    //console.log(country_name)
+                    var thisCountry = country
+                    thisCountry.style.display = 'none'
+                } else {
+                    var thisCountry = country
+                    thisCountry.style.display = 'flex'
+                }
 
             }
         }
 
         var input = document.querySelector('input')
-        
+
         input.addEventListener('input', updateSearch)
 
     }, [])
@@ -44,27 +44,7 @@ function Home() {
 
                         <hr />
                         <ul id="countries-list">
-                            <li className="country-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Brazil_%28Escobar_project%29.svg/2560px-Flag_of_Brazil_%28Escobar_project%29.svg.png" alt="" />
-                                <h3 className="title">Brazil</h3>
 
-                                <ion-icon name="chevron-forward"></ion-icon>
-
-                            </li>
-                            <li className="country-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Brazil_%28Escobar_project%29.svg/2560px-Flag_of_Brazil_%28Escobar_project%29.svg.png" alt="" />
-                                <h3 className="title">France</h3>
-
-                                <ion-icon name="chevron-forward"></ion-icon>
-
-                            </li>
-                            <li className="country-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Brazil_%28Escobar_project%29.svg/2560px-Flag_of_Brazil_%28Escobar_project%29.svg.png" alt="" />
-                                <h3 className="title">Espanha</h3>
-
-                                <ion-icon name="chevron-forward"></ion-icon>
-
-                            </li>
                         </ul>
                     </nav>
 
@@ -79,8 +59,7 @@ function Home() {
                                         <h3 className="league-type">League</h3>
                                     </section>
 
-                                    <ion-icon className="arrow" id="acc" name="chevron-down"></ion-icon>
-
+                                    <p>Temporadas</p>
                                     <section className="accordion">
                                         <ul>
                                             <li className="league-season-item">2017</li>

@@ -81,3 +81,8 @@
 .team-brand {
     width: 100% !important;
 }
+
+.league-item p {
+    margin-top: 20px;
+    padding-left: 10px;
+}
