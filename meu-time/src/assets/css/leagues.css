@@ -1,12 +1,14 @@
 .league-item img {
     width: 50px;
+    height: 50px;
 }
 
 .content-square ul {
     padding: 10px;
     border-radius: 4px;
     gap: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .carr {
@@ -16,6 +18,7 @@
 .league-item {
     width: 95%;
     border: 1px solid #ddd;
+    box-shadow: 0px 0px 3px #ddd;
     padding: 5px;
     border-radius: 5px;
     transition: 0.2s;
@@ -24,7 +27,7 @@
 
 .league-item:hover {
     transform: scale(1.02);
-    box-shadow: 0px 0px 2px #4a4a4a;
+    border-color: #5d27db;
 }
 
 .league-brand {
@@ -34,9 +37,8 @@
 }
 
 .league-type {
-    background-color: #ddd;
+    color: #5d27db;
     padding: 3px 15px;
-    border-radius: 5px;
 }
 
 .league-item ion-icon {
@@ -64,10 +66,15 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    height: 22px;
 }
 
 .accordion li:hover {
     box-shadow: 0px 0px 3px #6e6e6e;
+    border-color: #5d27db;
+    background-color: #5d27db;
+    color: #fff;
+    font-weight: bold;
 }
 
 .special-warning {
@@ -97,9 +104,17 @@
 }
 
 #league-list {
-    margin-left: 30px;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(10px);
+    overflow-x: hidden;
+}
+
+#team-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.team {
+    cursor: pointer;
 }
 
 #leagues {
@@ -111,19 +126,17 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 6px;
-    background-color: #eee;
+    background-color: #5d27db;
+    color: #fff;
     border: none;
     cursor: pointer;
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 5px;
-}
-
-.carousel-control:hover {
-    border-color: #000;
+    box-shadow: 0px 0px 4px #ccc;
 }
 
 .prev {
@@ -132,6 +145,20 @@
 
 .next {
     right: 10px;
+}
+
+#times {
+    display: none;
+}
+
+#label {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.9em;
+    z-index: 1000;
+    color: #5d27db;
 }
 
 @keyframes carousel-animation {

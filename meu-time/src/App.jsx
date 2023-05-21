@@ -4,7 +4,7 @@ import API_KEY from './keys'
 function auth() {
 
   var txtAPI = document.querySelector('input')
-  var displayError = document.querySelector('h3')
+  var displayError = document.querySelector('#display-error')
 
   if (txtAPI.value == '') {
     displayError.style.display = 'block'
@@ -25,7 +25,7 @@ function App() {
     <>
       <main className='main-login'>
         <div className='content'>
-          <h4>Meu Time</h4>
+          <h3>Meu Time</h3>
           <h1>Todos os Dados do seu Time Favorito com uma Interface Incrível</h1>
           <p>Veja estatísticas, classficação das ligas e muito mais do seu time preferido á pouquissimos cliques e não perca mais nada sobre o seu time.</p>
           <input type="text" placeholder='API KEY aqui' />
