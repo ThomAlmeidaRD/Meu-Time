@@ -116,6 +116,46 @@ function loadCountries() {
                                         var li = document.createElement('li')
                                         li.innerText = country_name_List[j].seasons[l].year
                                         leagueSeasonsUL.appendChild(li)
+
+                                        //
+                                        li.addEventListener('click', function () {
+                                           
+
+                                            var this_ul = this.parentNode
+                                            var this_acc = this_ul.parentNode
+                                            var id_liga = this_acc.parentNode.childNodes[0].childNodes[2].innerText
+                                            var nome_liga = this_acc.parentNode.childNodes[0].childNodes[1].innerText
+
+                                            console.log('ID da liga: ' + id_liga + ', season: ' + this.innerText)
+
+                                            var square_leagues = document.getElementById('leagues')
+                                            var square_teams = document.getElementById('teams')
+                                            var teams_nameOf = document.getElementById('team-nameof')
+                                            teams_nameOf.innerText = this.innerText + ' - ' + nome_liga
+
+                                            square_leagues.style.height = '42%'
+                                            square_teams.style.height = '42%'
+                                            square_teams.style.display = 'block'
+
+                                            
+                                            fetch(`https://v3.football.api-sports.io/teams?league=${id_liga}&season=${this.innerText}`, {
+                                                "method": "GET",
+                                                "headers": {
+                                                    "x-rapidapi-host": "v3.football.api-sports.io",
+                                                    "x-rapidapi-key": API_KEY
+                                                }
+                                            })
+                                                .then(response => response.json())
+                                                .then(data => {
+                                                    console.log(data.response)
+                                                })
+                                                .catch(err => {
+                                                    console.log(err);
+                                                });
+                                            
+
+                                        })
+
                                     }
 
 
@@ -157,8 +197,8 @@ function loadCountries() {
                             leagueList.removeChild(item)
                         }
 
-                       
-                      
+
+
                     }
 
 

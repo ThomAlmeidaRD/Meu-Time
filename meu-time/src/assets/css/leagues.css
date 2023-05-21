@@ -117,8 +117,9 @@
     cursor: pointer;
 }
 
-#leagues {
-    position: relative;
+#leagues,
+#teams {
+    transition: 0.3s;
 }
 
 .carousel-control {
@@ -147,7 +148,7 @@
     right: 10px;
 }
 
-#times {
+#teams {
     display: none;
 }
 

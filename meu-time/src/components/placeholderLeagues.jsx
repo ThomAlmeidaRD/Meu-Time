@@ -58,7 +58,7 @@ function PlaceLeagues() {
                 <section className="league-brand">
                     <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
                     <h3 className="title">Champions League</h3>
-                    <h3 className="league-type">League</h3>
+                    <h3 className="league-type">71</h3>
                 </section>
 
                 <p>Temporadas</p>
