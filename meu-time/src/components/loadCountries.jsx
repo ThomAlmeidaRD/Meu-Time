@@ -119,7 +119,7 @@ function loadCountries() {
 
                                         //
                                         li.addEventListener('click', function () {
-                                           
+
 
                                             var this_ul = this.parentNode
                                             var this_acc = this_ul.parentNode
@@ -137,7 +137,7 @@ function loadCountries() {
                                             square_teams.style.height = '42%'
                                             square_teams.style.display = 'block'
 
-                                            
+
                                             fetch(`https://v3.football.api-sports.io/teams?league=${id_liga}&season=${this.innerText}`, {
                                                 "method": "GET",
                                                 "headers": {
@@ -147,12 +147,28 @@ function loadCountries() {
                                             })
                                                 .then(response => response.json())
                                                 .then(data => {
+
+
+                                                    var team_list = document.querySelector('#team-list')
+                                                    team_list.innerHTML = ''
+
+                                                    for(var i = 0; i < data.response.length; i++){
+
+                                                        var teamItem = document.createElement('li')
+                                                        var teamLogo = document.createElement('img')
+                                                        var teamName = document.createElement('h3')
+
+                                                        
+
+                                                    }
+
+
                                                     console.log(data.response)
                                                 })
                                                 .catch(err => {
                                                     console.log(err);
                                                 });
-                                            
+
 
                                         })
 
