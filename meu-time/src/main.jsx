@@ -4,8 +4,6 @@ import App from './App.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './pages/Home.jsx'
 
-import Seasons from './pages/seasons.jsx'
-
 const pages = createBrowserRouter([
   {
     path: "/",
@@ -19,10 +17,7 @@ const pages = createBrowserRouter([
     path: "/paises/ligas",
     element: <Home />
   },
-  {
-    path: "/paises/ligas/temporadas",
-    element: <Seasons />
-  },
+
 
 ])
 

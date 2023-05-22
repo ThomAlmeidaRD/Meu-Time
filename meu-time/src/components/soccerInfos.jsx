@@ -1,5 +1,4 @@
 
-
 function spacing() {
 
     var square_leagues = document.getElementById('leagues')
@@ -10,7 +9,6 @@ function spacing() {
     square_teams.style.height = '42%'
     square_teams.style.display = 'block'
 
-    //console.log(this_item.parentNode)
     var this_ul = this_item.parentNode
     var this_acc = this_ul.parentNode
     var id_liga = this_acc.parentNode.childNodes[0].childNodes[2].innerText
@@ -21,16 +19,264 @@ function spacing() {
 
 
 function openTeam() {
-    console.log('aa')
+
+    var team_info_container = document.querySelector('#team-info-container')
+    team_info_container.style.display = 'flex'
+
+    //
+
+
 }
 
 function SoccerInfos() {
+
+
     return (
         <main className="soccer-infos">
             <div className="content-square" id="leagues">
-                <h2 className="nameof" id="league-nameof"></h2>
+                <h2 className="nameof" id="league-nameof">Todas as Ligas: Brazil</h2>
 
                 <ul className="list" id="league-list">
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
+                        <li className="league-item" id="item">
+                        <section className="league-brand">
+                            <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
+                            <h3 className="title">Champions League</h3>
+                            <h3 className="league-type">71</h3>
+                        </section>
+
+                        <p>Temporadas</p>
+                        <section className="accordion">
+                            <ul>
+                                <li className="league-season-item" id="this-item" onClick={spacing}>2017</li>
+                                <li className="league-season-item">2018</li>
+                                <li className="league-season-item">2019</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                                <li className="league-season-item">2020</li>
+                                <li className="league-season-item">2021</li>
+                                <li className="league-season-item">2022</li>
+                            </ul>
+                        </section>
+                    </li>
                     <li className="league-item" id="item">
                         <section className="league-brand">
                             <img src="https://brandslogo.net/wp-content/uploads/2013/06/uefa-champions-league-eps-vector-logo.png" alt="" />
@@ -61,6 +307,52 @@ function SoccerInfos() {
                 <ul className="list" id="team-list">
 
                     <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                    <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                    <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                    <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+
+                     <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                     <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                     <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                    <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                    <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                    <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+
+                     <li className="league-item team" onClick={openTeam}>
+                        <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
+                        <h3 className="title">Corinthians</h3>
+                    </li>
+                     <li className="league-item team" onClick={openTeam}>
                         <img src="https://logodetimes.com/times/corinthians/logo-corinthians-4096.png" alt="" />
                         <h3 className="title">Corinthians</h3>
                     </li>

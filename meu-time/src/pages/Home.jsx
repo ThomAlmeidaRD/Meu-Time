@@ -1,13 +1,14 @@
-//import loadCountries from "../components/loadCountries"
 
-import TeamInformation from '../components/teamInformation'
-import SoccerInfos from "../components/soccerInfos"
 import SideBar from "../components/sideBar"
+import TeamInformation from "../components/TeamInformation"
+
+import getCountries from '../components/getters/getCountries'
+import SoccerInfos from "../components/SoccerInfos"
+
 
 function Home() {
 
-    //loadCountries()
-
+    getCountries()    
 
     return (
         <>

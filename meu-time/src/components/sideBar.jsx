@@ -81,12 +81,43 @@ function SideBar() {
     }, [])
 
 
+    useEffect(() => {
+        var country_list = document.querySelector('#countries')
+        var menu_button = document.querySelector('#menu-button')
+
+        menu_button.addEventListener('click', function () {
+            console.log(country_list.style.width)
+            if (country_list.style.width == '') {
+                country_list.style.width = '8%'
+                country_list.childNodes[1].style.display = 'none'
+                country_list.childNodes[2].style.display = 'none'
+                country_list.childNodes[3].style.display = 'none'
+                country_list.childNodes[4].style.display = 'none'
+                country_list.childNodes[5].style.display = 'none'
+                menu_button.name = 'menu'
+                menu_button.style.right = '3px'
+            } else {
+                country_list.style.width = ''
+                country_list.childNodes[1].style.display = 'flex'
+                country_list.childNodes[2].style.display = 'block'
+                country_list.childNodes[3].style.display = 'flex'
+                country_list.childNodes[4].style.display = 'block'
+                country_list.childNodes[5].style.display = 'block'
+                menu_button.name = 'close'
+                menu_button.style.right = '10px'
+            }
+        })
+
+    }, [])
+
     return (
         <nav className="side-bar" id="countries">
+            <ion-icon name="close" id="menu-button"></ion-icon>
             <section id="logo">
                 <ion-icon name="analytics"></ion-icon>
                 <p>Meu Time</p>
             </section>
+
             <h2>Países</h2>
             <section className="search-bar">
                 <input type="text" placeholder="..." />
@@ -96,8 +127,99 @@ function SideBar() {
             <hr />
             <ul id="countries-list">
                 <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
                     <h3 className="title">Brazil</h3>
                 </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+                <li className="country-item" onClick={load}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="" />
+                    <h3 className="title">Brazil</h3>
+                </li>
+
             </ul>
         </nav>
     )

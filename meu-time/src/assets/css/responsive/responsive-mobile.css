@@ -1,0 +1,107 @@
+@media only screen and (max-width: 900px) {
+    .container-content {
+        width: 100%;
+    }
+    .country-item h3 {
+        font-size: 1.3em;
+    }
+    .side-bar {
+        transition: 0.3s;
+        width: 100%;
+    }
+    #menu-button {
+        font-size: 2.5em;
+        text-align: right;
+        position: absolute;
+        right: 10px;
+        color: #5d27db;
+    }
+    .soccer-infos {
+        width: 88%;
+    }
+    .content-square {
+        padding: 0px;
+    }
+    .accordion ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #team-list,
+    #league-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #countries {
+        position: relative;
+    }
+    .team-lists {
+        flex-wrap: wrap;
+    }
+    .players {
+        width: 100%;
+        height: 70vh;
+    }
+    .stats-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .stats-menu ion-icon {
+        font-size: 2em;
+        width: 100%;
+        color: #1a1a1b;
+    }
+    .stats-menu ion-icon:hover {
+        color: #5d27db;
+    }
+    .players ul {
+        height: 85%;
+        overflow-y: auto;
+        margin-top: 20px;
+    }
+    header ion-icon {
+        right: 10px;
+    }
+    .team-stats {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .team-lineup {
+        width: auto;
+        padding: 0;
+        display: none;
+    }
+    .team-lineup h2 {
+        font-size: 1.3em;
+        padding: 0px 25px;
+    }
+    .line-up {
+        height: 58vh;
+    }
+    .stats-graph {
+        width: 100%;
+        height: 65vh;
+        overflow-y: auto;
+        display: none;
+    }
+    .stats-graph>h2 {
+        display: none;
+    }
+    #chart-field {
+        margin: 5px 0px;
+        width: 100%;
+        height: 200px;
+        background-color: #5d27db10;
+    }
+}
+
+.league-type {
+    display: none;
+}
+
+.title {
+    width: 200px !important;
+}
+
+#team-list b {
+    display: none;
+}
