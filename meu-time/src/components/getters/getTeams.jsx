@@ -220,7 +220,7 @@ function getTeams() {
                                 options: {
                                     responsive: true,
                                     maintainAspectRatio: true,
-                                    borderColor: '#5d27db',
+                                    borderColor: '#009104',
                                     scales: {
                                         y: {
                                             beginAtZero: true

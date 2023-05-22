@@ -35,7 +35,7 @@ ul {
 
 .country-item:hover {
     transform: scale(1.01);
-    border-color: #5d27db;
+    border-color: #009104;
     box-shadow: 0px 0px 2px #000;
 }
 
@@ -66,12 +66,12 @@ ul {
     font-size: 1.03em;
     margin: 10px 0px;
     border-radius: 5px;
-    outline-color: #5d27db;
+    outline-color: #009104;
 }
 
 .side-bar input::placeholder {
     padding: 0px 7px;
-    color: #5d27db;
+    color: #009104;
     font-weight: 500;
 }
 
@@ -82,7 +82,7 @@ ul {
 }
 
 .side-bar h2 {
-    color: #5d27db;
+    color: #009104;
 }
 
 .search-bar {
@@ -94,7 +94,7 @@ ul {
 .search-bar ion-icon {
     position: absolute;
     right: 25px;
-    color: #5d27db;
+    color: #009104;
     font-size: 19px;
 }
 
@@ -104,7 +104,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #5d27db;
+    background-color: #009104;
     color: #fff;
     border-radius: 5px;
     width: 150px;

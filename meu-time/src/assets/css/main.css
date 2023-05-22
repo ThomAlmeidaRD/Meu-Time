@@ -23,12 +23,12 @@
     padding-bottom: 16px;
     font-size: 44px;
     line-height: 120%;
-    color: #5d27db;
+    color: #009104;
 }
 
 .content h3 {
     margin-bottom: 20px;
-    color: #5d27db;
+    color: #009104;
     padding: 4px;
 }
 
@@ -47,7 +47,7 @@
     color: #181818;
     width: 300px;
     font-weight: 500;
-    outline-color: #5d27db;
+    outline-color: #009104;
 }
 
 .content input::placeholder {
@@ -58,7 +58,7 @@
 .content button {
     padding: 12px;
     border: none;
-    background-color: #5d27db;
+    background-color: #009104;
     color: #fff;
     width: 150px;
     margin-left: 10px;

@@ -27,7 +27,7 @@
 
 .league-item:hover {
     transform: scale(1.02);
-    border-color: #5d27db;
+    border-color: #009104;
 }
 
 .league-brand {
@@ -37,7 +37,7 @@
 }
 
 .league-type {
-    color: #5d27db;
+    color: #009104;
     padding: 3px 15px;
 }
 
@@ -71,8 +71,8 @@
 
 .accordion li:hover {
     box-shadow: 0px 0px 3px #6e6e6e;
-    border-color: #5d27db;
-    background-color: #5d27db;
+    border-color: #009104;
+    background-color: #009104;
     color: #fff;
     font-weight: bold;
 }
@@ -127,7 +127,7 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 6px;
-    background-color: #5d27db;
+    background-color: #009104;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -150,16 +150,6 @@
 
 #teams {
     display: none;
-}
-
-#label {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 1.9em;
-    z-index: 1000;
-    color: #5d27db;
 }
 
 @keyframes carousel-animation {

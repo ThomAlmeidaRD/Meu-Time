@@ -40,7 +40,7 @@ header ion-icon {
 }
 
 header ion-icon:hover {
-    color: #5d27db;
+    color: #009104;
 }
 
 .players {
@@ -67,7 +67,7 @@ header ion-icon:hover {
 
 .player:hover {
     transform: scale(1.02);
-    border-color: #5d27db;
+    border-color: #009104;
 }
 
 .player b {

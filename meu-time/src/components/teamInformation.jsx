@@ -59,7 +59,6 @@ function TeamInformation() {
 
     }, [])
 
-
     return (
         <div className="team-info-container" id='team-info-container'>
             <div className="team-info-content">
@@ -74,127 +73,16 @@ function TeamInformation() {
                 </header>
 
                 <nav className='stats-menu'>
-                    <ion-icon name="person" id="show-players"></ion-icon>
-                    <ion-icon name="tablet-portrait" id="show-lineup"></ion-icon>
-                    <ion-icon name="stats-chart" id="show-stats"></ion-icon>
+                    <ion-icon class="hide-desktop" name="person" id="show-players"></ion-icon>
+                    <ion-icon class="hide-desktop" name="tablet-portrait" id="show-lineup"></ion-icon>
+                    <ion-icon class="hide-desktop" name="stats-chart" id="show-stats"></ion-icon>
                 </nav>
 
                 <div className="team-lists">
                     <div className="players" id='players-div'>
                         <h2>Jogadores</h2>
                         <ul id='player-list'>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
-                            <li className='player'>
-                                <img src="/vite.svg" alt="" />
-                                <section>
-                                    <h4>Thomas Almeida</h4>
-                                    <b>22 Anos</b>
-                                    <b>Brazil</b>
-                                </section>
-                            </li>
+
 
                         </ul>
                     </div>
@@ -219,19 +107,19 @@ function TeamInformation() {
                                 <section className="stats">
                                     <span>
                                         <h4>Jogos</h4>
-                                        <h3 id='results-games'>22</h3>
+                                        <h3 id='results-games'></h3>
                                     </span>
                                     <span id="victory">
                                         <h4>Vitórias</h4>
-                                        <h3 id='results-wins'>22</h3>
+                                        <h3 id='results-wins'></h3>
                                     </span>
                                     <span id="loses">
                                         <h4>Derrotas</h4>
-                                        <h3 id='results-loses'>22</h3>
+                                        <h3 id='results-loses'></h3>
                                     </span>
                                     <span id="draw">
                                         <h4>Empates</h4>
-                                        <h3 id='results-draws'>22</h3>
+                                        <h3 id='results-draws'></h3>
                                     </span>
                                 </section>
 
@@ -245,10 +133,6 @@ function TeamInformation() {
                             </div>
 
                         </div>
-
-
-
-
                     </div>
                 </div>
 

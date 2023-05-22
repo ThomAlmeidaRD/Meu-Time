@@ -36,7 +36,7 @@
 .content-square h2 {
     font-size: 1.2em;
     padding: 10px;
-    color: #5d27db;
+    color: #009104;
 }
 
 
@@ -58,7 +58,7 @@
 /* Handle */
 
  ::-webkit-scrollbar-thumb {
-    background: #5d27db;
+    background: #009104;
     border-radius: 5px;
 }
 
@@ -66,5 +66,9 @@
 /* Handle on hover */
 
  ::-webkit-scrollbar-thumb:hover {
-    background: #4c12d4;
+    background: #005203;
+}
+
+.hide-desktop {
+    display: none;
 }
