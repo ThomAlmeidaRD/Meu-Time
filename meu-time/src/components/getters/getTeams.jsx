@@ -1,5 +1,5 @@
 //
-import { API_KEY_RAPIDAPI, API_KEY_APISPORTS, API_HOST_APISPORTS, API_HOST_RAPDIAPI } from '../../keys'
+import { APISPORTS_API_HOST } from '../../keys'
 import Chart from "chart.js/auto";
 
 function getTeams() {
@@ -22,12 +22,12 @@ function getTeams() {
     square_teams.style.height = '42%'
     square_teams.style.display = 'block'
 
-
-    fetch(`https://api-football-beta.p.rapidapi.com/teams?league=${id_liga}&season=${number_season}`, {
+    //Trazer estatísticas do time: Times da Temporada Selecionada
+    fetch(`https://v3.football.api-sports.io/teams?league=${id_liga}&season=${number_season}`, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+            "x-rapidapi-host": APISPORTS_API_HOST,
+            "x-rapidapi-key": localStorage.getItem('my_api_key')
         }
     })
         .then(response => response.json())
@@ -83,11 +83,12 @@ function getTeams() {
                     team_info_container.style.display = 'flex'
                     player_list.innerHTML = ''
 
-                    fetch(`https://api-football-beta.p.rapidapi.com/players?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
+                    //Trazer estatísticas do time: Jogadores do Time naquela temporada
+                    fetch(`https://v3.football.api-sports.io/players?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
                         "method": "GET",
                         "headers": {
-                            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-                            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+                            "x-rapidapi-host": APISPORTS_API_HOST,
+                            "x-rapidapi-key": localStorage.getItem('my_api_key')
                         }
                     })
                         .then(response => response.json())
@@ -125,12 +126,12 @@ function getTeams() {
 
                         })
 
-
-                    fetch(`https://api-football-beta.p.rapidapi.com/teams/statistics?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
+                    //Trazer estatísticas do time: Resultados da temporada
+                    fetch(`https://v3.football.api-sports.io/teams/statistics?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
                         "method": "GET",
                         "headers": {
-                            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-                            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+                            "x-rapidapi-host": APISPORTS_API_HOST,
+                            "x-rapidapi-key": localStorage.getItem('my_api_key')
                         }
                     })
                         .then(response => response.json())
@@ -148,12 +149,12 @@ function getTeams() {
 
                         })
 
-
-                    fetch(`https://api-football-beta.p.rapidapi.com/teams/statistics?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
+                    //Trazer estatísticas do time: Formaçao mais usada
+                    fetch(`https://v3.football.api-sports.io/teams/statistics?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
                         "method": "GET",
                         "headers": {
-                            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-                            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+                            "x-rapidapi-host": APISPORTS_API_HOST,
+                            "x-rapidapi-key": localStorage.getItem('my_api_key')
                         }
                     })
                         .then(response => response.json())
@@ -182,12 +183,12 @@ function getTeams() {
 
                         })
 
-
-                    fetch(`https://api-football-beta.p.rapidapi.com/teams/statistics?team=${this_team_id}&season=${number_season}&league=${id_liga}`, {
+                    //Trazer estatísticas do time: Gols por tempo de jogo com gráfico usando ChartJS
+                    fetch(`https://v3.football.api-sports.io/teams/statistics?league=${id_liga}&season=${number_season}&team=${this_team_id}`, {
                         "method": "GET",
                         "headers": {
-                            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-                            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+                            "x-rapidapi-host": APISPORTS_API_HOST,
+                            "x-rapidapi-key": localStorage.getItem('my_api_key')
                         }
                     })
                         .then(response => response.json())

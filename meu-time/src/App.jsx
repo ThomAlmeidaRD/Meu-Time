@@ -46,7 +46,7 @@ function App() {
           <h3>Meu Time</h3>
           <h1>Todos os Dados do seu Time Favorito com uma Interface Incrível</h1>
           <p>Veja estatísticas, classficação das ligas e muito mais do seu time preferido á pouquissimos cliques e não perca mais nada sobre o seu time.</p>
-          <input type="text" placeholder='API KEY aqui' />
+          <input type="text" placeholder='Insira sua chave de API' />
           <button onClick={auth}>Entrar</button>
           <br />
           <a href="https://www.api-football.com/documentation-v3" target='blank' className='link'>Não tem uma chave de API ? <ion-icon name="help-circle"></ion-icon></a>

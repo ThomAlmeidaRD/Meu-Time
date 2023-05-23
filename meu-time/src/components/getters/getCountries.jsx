@@ -1,13 +1,16 @@
 
+import { APISPORTS_API_HOST } from "../../keys";
 import getLeagues from "./getLeagues";
+
 
 function getCountries() {
 
-    fetch("https://api-football-beta.p.rapidapi.com/countries", {
+    //Trazer países
+    fetch("https://v3.football.api-sports.io/countries", {
         "method": "GET",
         "headers": {
-            "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+            "x-rapidapi-host": APISPORTS_API_HOST,
+            "x-rapidapi-key": localStorage.getItem('my_api_key')
         }
     })
         .then(response => response.json())
@@ -42,6 +45,7 @@ function getCountries() {
 
                 countriesList.appendChild(countryItem)
 
+                //Trazer ligas conforme o país
                 countryItem.addEventListener('click', getLeagues)
 
             }

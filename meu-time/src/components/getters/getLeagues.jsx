@@ -1,4 +1,4 @@
-import { API_KEY_RAPIDAPI, API_KEY_APISPORTS, API_HOST_APISPORTS, API_HOST_RAPDIAPI } from '../../keys'
+import { APISPORTS_API_HOST } from '../../keys'
 import getTeams from "./getTeams";
 
 function getLeagues() {
@@ -11,11 +11,12 @@ function getLeagues() {
 
     if (label.innerText == 'Selecione um País') {
 
-        fetch("https://api-football-beta.p.rapidapi.com/leagues", {
+        //Trazer ligas conforme o país
+        fetch("https://v3.football.api-sports.io/leagues", {
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-                "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
+                "x-rapidapi-host": APISPORTS_API_HOST,
+                "x-rapidapi-key": localStorage.getItem('my_api_key')
             }
         })
             .then(response => response.json())
@@ -60,6 +61,7 @@ function getLeagues() {
                     leagueBrand_id.innerText = country_name_List[j].league.id
 
 
+                    //Trazer toas as temporadas das ligas listadas
                     for (var l = 0; l < country_name_List[j].seasons.length; l++) {
 
                         var li = document.createElement('li')
@@ -110,11 +112,11 @@ function getLeagues() {
             leagueList.removeChild(league)
         }
 
-        for (var team of listOfTeams ){
+        for (var team of listOfTeams) {
             teamsList.removeChild(team)
         }
 
-        
+
 
     }
 

@@ -2,7 +2,7 @@
 import SideBar from "../components/sideBar"
 import TeamInformation from "../components/TeamInformation"
 
-//import getCountries from '../components/getters/getCountries'
+import getCountries from '../components/getters/getCountries'
 import SoccerInfos from "../components/SoccerInfos"
 import { API_HOST_APISPORTS } from "../keys";
 
@@ -28,7 +28,7 @@ function Home() {
                     window.location.href = '/'
 
                 }else{
-                   // getCountries()                    
+                   getCountries()                    
                 }
 
             })
