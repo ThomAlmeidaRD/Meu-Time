@@ -15,13 +15,14 @@
 }
 
 .content {
-    width: 60%;
+    width: 50%;
     text-align: center;
+    margin-top: 20px;
 }
 
 .content h1 {
     padding-bottom: 16px;
-    font-size: 44px;
+    font-size: 36px;
     line-height: 120%;
     color: #009104;
 }
@@ -33,7 +34,7 @@
 }
 
 .content p {
-    font-size: 20px;
+    font-size: 18px;
     padding: 3px 20px;
     line-height: 150%;
     margin-bottom: 22px;
@@ -99,4 +100,18 @@
 
 .link:hover {
     text-decoration: underline;
+}
+
+.content img {
+    width: 600px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    box-shadow: 1px 1px 14px #ccc;
+    transition: 0.3s;
+}
+
+.content img:hover {
+    transform: scale(1.04);
+    box-shadow: 1px 1px 14px #000000ad;
 }

@@ -30,8 +30,10 @@ function getLeagues() {
 
             label.innerText = 'Países'
             var league_list = document.querySelector('#league-list')
-            league_list.innerHTML = ''
+            var league_nameOf = document.getElementById('league-nameof')
 
+            league_list.innerHTML = ''
+            league_nameOf.innerText = `Todas as Ligas do(a) ${country_name}`
             var country_name_List = []
 
             for (var i = 0; i < data.response.length; i++) {

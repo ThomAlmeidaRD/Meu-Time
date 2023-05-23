@@ -45,7 +45,8 @@ function App() {
         <div className='content'>
           <h3>Meu Time</h3>
           <h1>Todos os Dados do seu Time Favorito com uma Interface Incrível</h1>
-          <p>Veja estatísticas, classficação das ligas e muito mais do seu time preferido á pouquissimos cliques e não perca mais nada sobre o seu time.</p>
+          <img className='hide-mobile' src="/mockup.png" alt="" />
+          <br />
           <input type="text" placeholder='Insira sua chave de API' />
           <button onClick={auth}>Entrar</button>
           <br />

@@ -2,6 +2,9 @@
     .hide-desktop {
         display: block;
     }
+    .hide-mobile {
+        display: none;
+    }
     .content {
         width: auto !important;
     }
