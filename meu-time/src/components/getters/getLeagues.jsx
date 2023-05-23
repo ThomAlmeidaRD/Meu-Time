@@ -3,6 +3,7 @@ import getTeams from "./getTeams";
 
 function getLeagues() {
 
+    var country_name = this.childNodes[1].innerText
     var country_list = document.querySelector('#countries')
     var menu_button = document.querySelector('#menu-button')
     var screen_width = window.screen.width
@@ -14,7 +15,7 @@ function getLeagues() {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-                "x-rapidapi-key": "23e07d05d4mshf6d5c7d4497e61ap15e2c2jsnaed65a8bcb1e"
+                "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
             }
         })
             .then(response => response.json())
@@ -98,14 +99,22 @@ function getLeagues() {
 
     } else {
 
-        var leagueList = document.getElementById('league-list')
-        var listOfLI = document.querySelectorAll('.league-item')
-
-        for (var item of listOfLI) {
-            leagueList.removeChild(item)
-        }
+        var leagueList = document.querySelector('#league-list')
+        var teamsList = document.querySelector('#team-list')
+        var listOfLeagues = document.querySelectorAll('.league-item')
+        var listOfTeams = document.querySelectorAll('.league-item team')
 
         label.innerText = 'Selecione um País'
+
+        for (var league of listOfLeagues) {
+            leagueList.removeChild(league)
+        }
+
+        for (var team of listOfTeams ){
+            teamsList.removeChild(team)
+        }
+
+        
 
     }
 

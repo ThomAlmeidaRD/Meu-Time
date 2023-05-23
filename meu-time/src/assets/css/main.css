@@ -68,6 +68,7 @@
     letter-spacing: 0.99px;
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: 20px;
 }
 
 .content button:hover {
@@ -86,4 +87,16 @@
 .no-vh-full {
     height: auto !important;
     margin-top: 10%;
+}
+
+.link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.link:hover {
+    text-decoration: underline;
 }

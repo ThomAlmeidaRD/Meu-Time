@@ -13,11 +13,6 @@ const pages = createBrowserRouter([
     path: "/home",
     element: <Home />
   },
-  {
-    path: "/paises/ligas",
-    element: <Home />
-  },
-
 
 ])
 

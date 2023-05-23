@@ -7,7 +7,7 @@ function getCountries() {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "api-football-beta.p.rapidapi.com",
-            "x-rapidapi-key": "23e07d05d4mshf6d5c7d4497e61ap15e2c2jsnaed65a8bcb1e"
+            "x-rapidapi-key": "0a8025daa0msh1827d8b09fb2a34p1d1a3bjsn017c5eee4962"
         }
     })
         .then(response => response.json())

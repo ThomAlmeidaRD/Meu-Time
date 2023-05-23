@@ -1,46 +1,6 @@
 
 import { useEffect } from "react"
 
-function load() {
-
-    var country_list = document.querySelector('#countries')
-    var menu_button = document.querySelector('#menu-button')
-    var screen_width = window.screen.width
-    console.log(screen_width)
-
-    var label = document.getElementById('label')
-    var leagueList = document.getElementById('league-list')
-
-    if (label.innerText == 'Selecione um País') {
-        console.log(label.innerText)
-        var item = document.createElement('li')
-        item.innerText = 'Lista carregada'
-        item.id = 'take'
-        label.innerText = 'Países'
-        leagueList.appendChild(item)
-
-        if (screen_width <= 900) {
-            country_list.style.width = '8%'
-            country_list.childNodes[1].style.display = 'none'
-            country_list.childNodes[2].style.display = 'none'
-            country_list.childNodes[3].style.display = 'none'
-            country_list.childNodes[4].style.display = 'none'
-            country_list.childNodes[5].style.display = 'none'
-            menu_button.name = 'menu'
-            menu_button.style.right = '3px'
-        }
-
-    } else {
-
-        var listOfLI = document.querySelectorAll('#league-list #take')
-        for (item of listOfLI) {
-            leagueList.removeChild(item)
-        }
-        label.innerText = 'Selecione um País'
-    }
-
-}
-
 function SideBar() {
 
     useEffect(() => {
@@ -107,7 +67,6 @@ function SideBar() {
                 <ion-icon name="analytics"></ion-icon>
                 <p>Meu Time</p>
             </section>
-
             <h2 id="label">Selecione um País</h2>
             <section className="search-bar">
                 <input type="text" placeholder="..." />
@@ -115,9 +74,9 @@ function SideBar() {
             </section>
 
             <hr />
-            
+
             <ul id="countries-list">
-             
+
             </ul>
         </nav>
     )

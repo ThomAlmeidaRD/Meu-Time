@@ -1,22 +1,40 @@
 import './assets/css/main.css'
-import API_KEY from './keys'
+import { API_HOST_APISPORTS } from './keys'
 
 function auth() {
 
-  var txtAPI = document.querySelector('input')
-  var displayError = document.querySelector('#display-error')
+  var txt_api = document.querySelector('input')
+  var display_error = document.querySelector('#display-error')
+  localStorage.setItem("my_api_key", txt_api.value)
 
-  if (txtAPI.value == '') {
-    displayError.style.display = 'block'
-    displayError.innerText = 'Vazio!, é necessário uma Chave de API.'
-  } else if (txtAPI.value != API_KEY) {
-    displayError.style.display = 'block'
-    displayError.innerText = 'Insira uma chave de API válida.'
-  } else if (txtAPI.value == API_KEY) {
-    txtAPI.value = ''
-    window.location.href = '/home'
-    
-  }
+  fetch("https://v3.football.api-sports.io/status", {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": API_HOST_APISPORTS,
+      "x-rapidapi-key": txt_api.value
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+
+      if (data.response.length == 0) {
+        console.log(data.response.length)
+        display_error.style.display = 'block'
+        display_error.innerText = 'Insira uma chave de API válida.'
+       
+      } else {
+        console.log(data.response.account)
+        window.location.href = '/home'
+      }
+
+      txt_api.value = ''
+
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
+
 }
 
 function App() {
@@ -30,6 +48,8 @@ function App() {
           <p>Veja estatísticas, classficação das ligas e muito mais do seu time preferido á pouquissimos cliques e não perca mais nada sobre o seu time.</p>
           <input type="text" placeholder='API KEY aqui' />
           <button onClick={auth}>Entrar</button>
+          <br />
+          <a href="https://www.api-football.com/documentation-v3" target='blank' className='link'>Não tem uma chave de API ? <ion-icon name="help-circle"></ion-icon></a>
           <h3 id='display-error'>display error</h3>
         </div>
       </main>
