@@ -1,7 +1,8 @@
 
 import SideBar from "../components/sideBar"
 import TeamInformation from '../components/teamInformation'
-import SoccerInfos from "../components/SoccerInfos"
+import SoccerInfos from '../components/soccerInfos'
+
 import { API_HOST_APISPORTS } from "../keys";
 
 import getCountries from '../components/getters/getCountries'
