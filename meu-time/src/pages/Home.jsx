@@ -28,7 +28,7 @@ function Home() {
                     window.location.href = '/'
 
                 } else {
-                    getCountries()                    
+                    getCountries()
                 }
 
             })
@@ -47,7 +47,7 @@ function Home() {
                 <div className="container-content">
                     <SideBar />
                     <SoccerInfos />
-                    <TeamInformation/>                    
+                    <TeamInformation />
                 </div>
             </div>
         </>
