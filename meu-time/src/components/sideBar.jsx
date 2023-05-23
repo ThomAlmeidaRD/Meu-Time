@@ -3,6 +3,7 @@ import { useEffect } from "react"
 
 function SideBar() {
 
+
     useEffect(() => {
 
         const updateSearch = (event) => {
@@ -60,6 +61,9 @@ function SideBar() {
     }, [])
 
 
+
+
+
     return (
         <nav className="side-bar" id="countries">
             <ion-icon class="hide-desktop" name="close" id="menu-button"></ion-icon>
@@ -76,7 +80,7 @@ function SideBar() {
             <hr />
 
             <ul id="countries-list">
-
+              
             </ul>
         </nav>
     )

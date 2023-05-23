@@ -27,8 +27,8 @@ function Home() {
                     alert('usuario nao logado, voltando para o login')
                     window.location.href = '/'
 
-                }else{
-                   getCountries()                    
+                } else {
+                    getCountries()                    
                 }
 
             })

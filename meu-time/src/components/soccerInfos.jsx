@@ -30,6 +30,9 @@ function SoccerInfos() {
 
     return (
         <main className="soccer-infos">
+            <section className="visual-response" id="visual-response">
+                <p id="response-msg"></p>
+            </section>
             <div className="content-square" id="leagues">
                 <h2 className="nameof" id="league-nameof"></h2>
 
