@@ -8,7 +8,7 @@
 **Meu Time** é uma aplicação web front-end com o objetivo de buscar dados das principais ligas, times e jogadores de futebol do mundo, utilizando uma API chamada [_API-FOOTBALL_](https://www.api-football.com/documentation-v3).
 
 ## Tecnologias
-Para o desenvolvimento desta aplicação, utilizei **ReactJS** usando o [_Vite_](https://vitejs.dev) como ferramenta de contrução, isso faz com que a aplicação inicie mais rapidamente e com maior performance, para mostrar os gráficos de alguns dados pedidos no teste, utilizei a biblioteca [_ChartJS_](https://www.chartjs.org) que é uma forma bem prática de mostrar dados vindos de um JSON diretamente para o front-end, tudo isso está hospedado ao vivo neste momento usando a conta **Hobbie** na **Vercel** que você pode acessar por [**Aqui**]()
+Para o desenvolvimento desta aplicação, utilizei **ReactJS** usando o [_Vite_](https://vitejs.dev) como ferramenta de contrução, isso faz com que a aplicação inicie mais rapidamente e com maior performance, para mostrar os gráficos de alguns dados pedidos no teste, utilizei a biblioteca [_ChartJS_](https://www.chartjs.org) que é uma forma bem prática de mostrar dados vindos de um JSON diretamente para o front-end, tudo isso está hospedado ao vivo neste momento usando a conta **Hobbie** na **Vercel** que você pode acessar por [**Aqui**](https://meu-time-lemon.vercel.app)
 
 
 ## Desafios no desenvolvimento
